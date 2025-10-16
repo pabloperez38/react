@@ -1,16 +1,38 @@
-# React + Vite
+# React + Vite + Bootstrap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una tienda demo hecha con React y Vite, usando Bootstrap para estilos responsivos y componentes visuales.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Grilla de productos responsiva usando Bootstrap (`row`, `col-12 col-sm-6 col-md-4 col-lg-3`).
+-   Tarjetas de producto con imagen, nombre, precio y descripción.
+-   Navegación superior con barra Bootstrap.
+-   Carrito de compras con contexto global.
+-   Detalle de producto con botón para agregar al carrito.
 
-## React Compiler
+## Instalación y uso
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Instala las dependencias:
+    ```powershell
+    npm install
+    ```
+2. Inicia el servidor de desarrollo:
+    ```powershell
+    npm run dev
+    ```
+3. Abre la app en tu navegador en la URL que muestra Vite (por defecto http://localhost:5173).
 
-## Expanding the ESLint configuration
+## Estructura principal
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   `src/components/ItemList/ItemList.jsx`: grilla de productos.
+-   `src/components/Item/Item.jsx`: tarjeta de producto.
+-   `src/components/Nav/Nav.jsx`: barra de navegación.
+-   `src/context/CartContext/`: lógica de carrito.
+
+## Personalización
+
+Puedes modificar los estilos usando clases de Bootstrap o agregando tus propias reglas en `App.css`.
+
+## Créditos
+
+Basado en la plantilla oficial de Vite + React, extendido para usar Bootstrap y componentes de tienda.

@@ -1,66 +1,66 @@
 [
     {
         "id": 1,
-        "category": "electronica",
-        "name": "Auriculares Bluetooth",
-        "price": 15999.99,
-        "description": "Auriculares inalámbricos con cancelación de ruido.",
-        "imageUrl": "./images/auriculares.jpg"
+        "category": "smartphone",
+        "name": "iPhone 15 Pro",
+        "price": 1299999.0,
+        "description": "Apple iPhone 15 Pro 256GB, pantalla Super Retina XDR de 6.1 pulgadas.",
+        "imageUrl": "/images/iphone15pro.jpg"
     },
     {
         "id": 2,
-        "category": "electronica",
-        "name": "Smartphone Android",
-        "price": 249999.0,
-        "description": "Pantalla AMOLED de 6.5 pulgadas y 128GB de almacenamiento.",
-        "imageUrl": "./images/smartphone.jpg"
+        "category": "smartphone",
+        "name": "Samsung Galaxy S24 Ultra",
+        "price": 1199999.0,
+        "description": "Samsung Galaxy S24 Ultra 512GB, cámara cuádruple, pantalla AMOLED 6.8 pulgadas.",
+        "imageUrl": "/images/galaxys24ultra.jpg"
     },
     {
         "id": 3,
-        "category": "hogar",
-        "name": "Lámpara LED de Escritorio",
-        "price": 8999.5,
-        "description": "Lámpara con luz regulable y brazo flexible.",
-        "imageUrl": "./images/lampara.jpg"
+        "category": "smartphone",
+        "name": "Xiaomi Redmi Note 13",
+        "price": 349999.0,
+        "description": "Xiaomi Redmi Note 13 128GB, batería 5000mAh, cámara 108MP.",
+        "imageUrl": "/images/redminote13.jpg"
     },
     {
         "id": 4,
-        "category": "deportes",
-        "name": "Pelota de Fútbol",
-        "price": 12999.0,
-        "description": "Pelota profesional tamaño 5, resistente.",
-        "imageUrl": "./images/pelota.jpg"
+        "category": "televisor",
+        "name": "Samsung QLED 55 4K",
+        "price": 799999.0,
+        "description": "Smart TV Samsung QLED 55 pulgadas, 4K UHD, Tizen OS.",
+        "imageUrl": "/images/samsungqled55.jpg"
     },
     {
         "id": 5,
-        "category": "electronica",
-        "name": "Teclado Mecánico",
-        "price": 32999.99,
-        "description": "Teclado con retroiluminación RGB y switches azules.",
-        "imageUrl": "./images/teclado.jpg"
+        "category": "televisor",
+        "name": "LG OLED evo 65 4K",
+        "price": 1399999.0,
+        "description": "LG OLED evo 65 pulgadas, 4K UHD, Dolby Vision IQ, webOS.",
+        "imageUrl": "/images/lgoled65.jpg"
     },
     {
         "id": 6,
-        "category": "hogar",
-        "name": "Juego de Sábanas 2 Plazas",
-        "price": 18999.0,
-        "description": "Juego de sábanas de algodón 144 hilos.",
-        "imageUrl": "./images/sabanas.jpg"
+        "category": "televisor",
+        "name": "TCL 50 4K Android TV",
+        "price": 499999.0,
+        "description": "TCL 50 pulgadas, 4K UHD, Android TV, Google Assistant.",
+        "imageUrl": "/images/tcl50.jpg"
     },
     {
         "id": 7,
-        "category": "deportes",
-        "name": "Mancuernas 10kg",
-        "price": 25999.0,
-        "description": "Par de mancuernas ajustables para entrenamiento.",
-        "imageUrl": "./images/mancuernas.jpg"
+        "category": "tablet",
+        "name": "Apple iPad Air 5",
+        "price": 699999.0,
+        "description": "iPad Air 5ta generación, 10.9 pulgadas, chip M1, 64GB.",
+        "imageUrl": "/images/ipadair5.jpg"
     },
     {
         "id": 8,
-        "category": "electronica",
-        "name": "Smartwatch Deportivo",
-        "price": 49999.0,
-        "description": "Reloj inteligente con GPS y medición de pulsaciones.",
-        "imageUrl": "./images/smartwatch.jpg"
+        "category": "tablet",
+        "name": "Samsung Galaxy Tab S9",
+        "price": 799999.0,
+        "description": "Samsung Galaxy Tab S9, 11 pulgadas, 256GB, S Pen incluido.",
+        "imageUrl": "/images/galaxytabs9.jpg"
     }
 ]

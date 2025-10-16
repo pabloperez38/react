@@ -9,7 +9,7 @@ export const ItemDetail = ({ detail }) => {
                 <img src={detail.imageUrl} alt={detail.description} />
             </div>
             <div className="meta">
-                <h2 className="product-title">{detail.name}</h2>
+                <h1 className="product-title">{detail.name}</h1>
                 <p style={{ fontWeight: 700, fontSize: "1.25rem" }}>
                     ${detail.price}
                 </p>
