@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "category": "electronica",
+        "name": "Auriculares Bluetooth",
+        "price": 15999.99,
+        "description": "Auriculares inalámbricos con cancelación de ruido.",
+        "imageUrl": "./images/auriculares.jpg"
+    },
+    {
+        "id": 2,
+        "category": "electronica",
+        "name": "Smartphone Android",
+        "price": 249999.0,
+        "description": "Pantalla AMOLED de 6.5 pulgadas y 128GB de almacenamiento.",
+        "imageUrl": "./images/smartphone.jpg"
+    },
+    {
+        "id": 3,
+        "category": "hogar",
+        "name": "Lámpara LED de Escritorio",
+        "price": 8999.5,
+        "description": "Lámpara con luz regulable y brazo flexible.",
+        "imageUrl": "./images/lampara.jpg"
+    },
+    {
+        "id": 4,
+        "category": "deportes",
+        "name": "Pelota de Fútbol",
+        "price": 12999.0,
+        "description": "Pelota profesional tamaño 5, resistente.",
+        "imageUrl": "./images/pelota.jpg"
+    },
+    {
+        "id": 5,
+        "category": "electronica",
+        "name": "Teclado Mecánico",
+        "price": 32999.99,
+        "description": "Teclado con retroiluminación RGB y switches azules.",
+        "imageUrl": "./images/teclado.jpg"
+    },
+    {
+        "id": 6,
+        "category": "hogar",
+        "name": "Juego de Sábanas 2 Plazas",
+        "price": 18999.0,
+        "description": "Juego de sábanas de algodón 144 hilos.",
+        "imageUrl": "./images/sabanas.jpg"
+    },
+    {
+        "id": 7,
+        "category": "deportes",
+        "name": "Mancuernas 10kg",
+        "price": 25999.0,
+        "description": "Par de mancuernas ajustables para entrenamiento.",
+        "imageUrl": "./images/mancuernas.jpg"
+    },
+    {
+        "id": 8,
+        "category": "electronica",
+        "name": "Smartwatch Deportivo",
+        "price": 49999.0,
+        "description": "Reloj inteligente con GPS y medición de pulsaciones.",
+        "imageUrl": "./images/smartwatch.jpg"
+    },
+    {
+        "id": 9,
+        "category": "hogar",
+        "name": "Cafetera Express",
+        "price": 69999.0,
+        "description": "Cafetera automática con espumador de leche.",
+        "imageUrl": "./images/cafetera.jpg"
+    },
+    {
+        "id": 10,
+        "category": "deportes",
+        "name": "Colchoneta de Yoga",
+        "price": 9999.0,
+        "description": "Colchoneta antideslizante para yoga y pilates.",
+        "imageUrl": "./images/colchoneta.jpg"
+    }
+]
