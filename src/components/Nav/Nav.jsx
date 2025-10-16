@@ -4,7 +4,7 @@ import { useCartContext } from "../../context/CartContext/useCartContext";
 export const Nav = () => {
     const { getTotalItems } = useCartContext();
     return (
-        <nav>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary mb-4 p-3">
             <ul>
                 <li>
                     <Link to={"/"}>Home</Link>

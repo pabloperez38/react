@@ -20,7 +20,7 @@ export const ItemListContainer = () => {
 
     return (
         <section>
-            <h1>Bienvenida</h1>
+            <h1>Tienda</h1>
             <ItemList products={products} />
         </section>
     );

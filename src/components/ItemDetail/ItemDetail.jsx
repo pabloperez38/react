@@ -1,16 +1,28 @@
 import { useCartContext } from "../../context/CartContext/useCartContext";
-import { Item } from "../Item/Item";
 
 export const ItemDetail = ({ detail }) => {
     const { addItem } = useCartContext();
+    if (!detail) return <p>Producto no encontrado</p>;
     return (
-        <Item {...detail}>
-            <button
-                onClick={() => {
-                    addItem(detail);
-                }}>
-                Agregar al carrito
-            </button>
-        </Item>
+        <section className="item-detail">
+            <div>
+                <img src={detail.imageUrl} alt={detail.description} />
+            </div>
+            <div className="meta">
+                <h2 className="product-title">{detail.name}</h2>
+                <p style={{ fontWeight: 700, fontSize: "1.25rem" }}>
+                    ${detail.price}
+                </p>
+                <p>{detail.description}</p>
+                <div style={{ marginTop: "1rem" }}>
+                    <button
+                        onClick={() => {
+                            addItem(detail);
+                        }}>
+                        Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </section>
     );
 };

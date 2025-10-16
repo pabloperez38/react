@@ -1,42 +1,200 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
+}
+
+/* Layout and common components */
+body > #root {
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    color: inherit;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+}
+
+.span-cart {
+    background: #ff6b6b;
+    color: white;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Product grid */
+.products-grid {
+    display: grid;
+    /* bajar el mínimo para permitir más columnas cuando el contenedor lo permita */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: start;
+    padding: 0.5rem 0;
+}
+
+/* Breakpoints explícitos (flexible pero más predecible) */
+@media (min-width: 480px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+@media (min-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* En pantallas muy anchas, aumentar el mínimo para mejorar la separación */
+@media (min-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+.product-item {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    /* make cards stretch to the same height inside the grid */
+    height: 100%;
+    justify-content: space-between;
+}
+.product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.product-item img {
+    width: 100%;
+    /* prefer aspect-ratio if available, fall back to fixed height */
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Make links full-height inside grid cells so padding is clickable */
+.products-grid a {
+    display: block;
+    height: 100%;
+}
+
+/* Small tweak: reduce gap on very small screens */
+@media (max-width: 420px) {
+    .products-grid {
+        gap: 0.5rem;
+    }
+}
+
+.product-title {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.product-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Item detail */
+.item-detail {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.item-detail img {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.item-detail .meta {
+    max-width: 560px;
+    text-align: left;
+}
+
+@media (max-width: 640px) {
+    .item-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item-detail img {
+        width: 100%;
+        height: auto;
+    }
 }

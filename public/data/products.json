@@ -62,21 +62,5 @@
         "price": 49999.0,
         "description": "Reloj inteligente con GPS y medición de pulsaciones.",
         "imageUrl": "./images/smartwatch.jpg"
-    },
-    {
-        "id": 9,
-        "category": "hogar",
-        "name": "Cafetera Express",
-        "price": 69999.0,
-        "description": "Cafetera automática con espumador de leche.",
-        "imageUrl": "./images/cafetera.jpg"
-    },
-    {
-        "id": 10,
-        "category": "deportes",
-        "name": "Colchoneta de Yoga",
-        "price": 9999.0,
-        "description": "Colchoneta antideslizante para yoga y pilates.",
-        "imageUrl": "./images/colchoneta.jpg"
     }
 ]
