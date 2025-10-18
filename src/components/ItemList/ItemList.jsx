@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Item } from "../Item/Item";
+import "./ItemList.css";
 
 export const ItemList = ({ products }) => {
     return (
@@ -12,11 +13,7 @@ export const ItemList = ({ products }) => {
                             className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <Link
                                 to={`/detail/${product.id}`}
-                                style={{
-                                    textDecoration: "none",
-                                    color: "inherit",
-                                }}
-                                className="h-100 d-block">
+                                className="h-100 d-block link-item">
                                 <Item {...product} />
                             </Link>
                         </div>

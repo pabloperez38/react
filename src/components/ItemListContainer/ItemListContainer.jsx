@@ -20,8 +20,10 @@ export const ItemListContainer = () => {
 
     return (
         <section>
-            <h1>Tienda</h1>
-            <ItemList products={products} />
+            <div className="container">
+                <h1 className="my-4">Tienda</h1>
+                <ItemList products={products} />
+            </div>
         </section>
     );
 };
