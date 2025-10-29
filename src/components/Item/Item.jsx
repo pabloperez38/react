@@ -17,10 +17,7 @@ export const Item = ({ name, price, description, imageUrl, children }) => {
             <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{name}</h5>
                 <p className="product-description">{description}</p>
-                <div className="mt-3 d-flex flex-column flex-sm-row justify-content-between align-items-stretch gap-2">
-                    <button className="btn btn-outline-primary w-100 w-sm-auto">
-                        Ver
-                    </button>
+                <div className="mt-3 d-flex flex-column flex-sm-row justify-content-between align-items-stretch gap-2">                
                     <div className="d-flex align-items-center">{children}</div>
                 </div>
             </div>

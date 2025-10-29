@@ -7,15 +7,10 @@ export const Nav = () => {
     const { getTotalItems } = useCartContext();
     const [open, setOpen] = useState(false);
 
-    const handleNavClick = () => setOpen(false);
-
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
             <div className="container">
-                <Link
-                    className="navbar-brand"
-                    to={"/"}
-                    onClick={handleNavClick}>
+                <Link className="navbar-brand" to={"/"}>
                     Mi Tienda
                 </Link>
                 <button
@@ -32,43 +27,34 @@ export const Nav = () => {
                     id="navbarNav">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link
-                                className="nav-link"
-                                to={"/"}
-                                onClick={handleNavClick}>
+                            <Link className="nav-link" to={"/"}>
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link
-                                className="nav-link"
-                                to={"/category/hogar"}
-                                onClick={handleNavClick}>
-                                Hogar
+                            <Link className="nav-link" to={"/category/tablet"}>
+                                Tablets
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link
                                 className="nav-link"
-                                to={"/category/electronica"}
-                                onClick={handleNavClick}>
-                                Electrónica
+                                to={"/category/televisor"}>
+                                Televidores
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link
                                 className="nav-link"
-                                to={"/category/deportes"}
-                                onClick={handleNavClick}>
-                                Deportes
+                                to={"/category/smartphone"}>
+                                Smartphone
                             </Link>
                         </li>
                     </ul>
                     <div className="d-flex align-items-center">
                         <Link
                             className="btn btn-outline-primary me-2"
-                            to={"/cart"}
-                            onClick={handleNavClick}>
+                            to={"/carrito"}>
                             Carrito
                         </Link>
                         {getTotalItems() > 0 && (
