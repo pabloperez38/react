@@ -1,0 +1,86 @@
+/* Styles for ProductFormContainer form (uses Bootstrap 5 in the app) */
+
+/* Scope to section > form to avoid global collisions */
+section > form {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(18, 38, 63, 0.06);
+    border: 1px solid #eef2f7;
+}
+
+section > form h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+section > form > div {
+    margin-bottom: 0.9rem;
+}
+
+section > form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #212529;
+}
+
+/* Inputs look like Bootstrap form-control */
+section > form input[type="text"],
+section > form input[type="number"],
+section > form input[type="file"],
+section > form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background: #fff;
+    color: #212529;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+section > form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.error {
+    color: #dc3545;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Buttons inside this form - scope so we don't override global btn styles */
+section > form button.btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    background-color: #0d6efd; /* bootstrap primary */
+    color: #fff;
+    border: 1px solid rgba(13, 110, 253, 0.15);
+}
+
+section > form button.btn[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* File input small tweak */
+section > form input[type="file"] {
+    padding: 0.35rem 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    section > form {
+        padding: 1rem;
+        margin: 0.75rem;
+    }
+    section > form h2 {
+        font-size: 1.2rem;
+    }
+}
