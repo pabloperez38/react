@@ -32,6 +32,7 @@ section > form label {
 section > form input[type="text"],
 section > form input[type="number"],
 section > form input[type="file"],
+section > form input[type="password"],
 section > form textarea {
     display: block;
     width: 100%;

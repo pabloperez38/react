@@ -12,6 +12,6 @@ export const createProduct = async (product) => {
         throw new Error("Error al crear el producto");
     }
 
-    const data = await response.json();
-    return data;
+    const result = await response.json();
+    return result;
 };
