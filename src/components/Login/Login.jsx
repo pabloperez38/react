@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useAuthContext } from "../../context/AuthContext/useAuthContext";
 import { Navigate, useNavigate } from "react-router-dom";
+import { validateLogin } from "../../utils/validateLogin";
 
 export const Login = () => {
     const [userForm, setUserForm] = useState({ name: "", password: "" });
+    const [loading, setLoading] = useState();
     const { user, login } = useAuthContext();
+    const [errors, setErrors] = useState("");
     const navigate = useNavigate();
 
     if (user) {
@@ -17,13 +20,29 @@ export const Login = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
+        setErrors({});
+        setLoading(true);
 
-        const success = login(userForm.name, userForm.password);
-        if (success) {
-            navigate("/admin/alta-productos");
-        } else {
-            alert("Credenciales incorrectas");
+        const newErrors = validateLogin({ ...userForm });
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            setLoading(false);
+            return;
+        }
+
+        try {
+            const success = login(userForm.name, userForm.password);
+            if (success) {
+                navigate("/admin/alta-productos");
+            } else {
+                setErrors({ general: "Credenciales incorrectas" });
+            }
+        } catch (error) {
+            setErrors({ general: error.message });
             setUserForm({ name: "", password: "" });
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -31,28 +50,31 @@ export const Login = () => {
         <form onSubmit={handleSubmit}>
             <h2>Iniciar sesión</h2>
             <div>
-                <label htmlFor="name">
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={userForm.name}
-                        onChange={handleChange}
-                    />
-                </label>
+                <label htmlFor="name">Usuario</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={userForm.name}
+                    onChange={handleChange}
+                />
+                {errors.name && <p className="error">{errors.name}</p>}
             </div>
             <div>
-                <label htmlFor="password">
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        value={userForm.password}
-                        onChange={handleChange}
-                    />
-                </label>
+                <label htmlFor="password">Contraseña</label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    value={userForm.password}
+                    onChange={handleChange}
+                />
+                {errors.password && <p className="error">{errors.password}</p>}
             </div>
-            <button className="btn btn-info" type="submit">Iniciar sesión</button>
+            {errors.general && <p className="error">{errors.general}</p>}
+            <button className="btn" type="submit" disabled={loading}>
+                {loading ? "Ingresando..." : "Ingresar"}
+            </button>
         </form>
     );
 };
