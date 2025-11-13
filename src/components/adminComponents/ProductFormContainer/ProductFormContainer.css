@@ -1,6 +1,3 @@
-/* Styles for ProductFormContainer form (uses Bootstrap 5 in the app) */
-
-/* Scope to section > form to avoid global collisions */
 section > form {
     max-width: 800px;
     margin: 0 auto 2rem auto;

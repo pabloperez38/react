@@ -18,6 +18,11 @@ export const ItemListContainer = () => {
     return (
         <section>
             <div className="container">
+                {category && (
+                    <h1 className="mb-4 text-capitalize text-primary">
+                        {category}
+                    </h1>
+                )}
                 <ItemList products={products} />
             </div>
         </section>

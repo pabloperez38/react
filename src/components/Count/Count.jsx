@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaCartPlus } from "react-icons/fa";
 import "./Count.css";
 export const Count = ({ btnText, onConfirm }) => {
     const [count, setCount] = useState(0);
@@ -31,9 +32,10 @@ export const Count = ({ btnText, onConfirm }) => {
                 </button>
             </div>
             <button
-                className="btn btn-primary"
+                className="btn btn-primary p-2"
                 onClick={confirm}
                 disabled={count === 0}>
+                <FaCartPlus className="margin" /> 
                 {btnText}
             </button>
         </div>

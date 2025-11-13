@@ -1,6 +1,5 @@
 import { useCartContext } from "../../context/CartContext/useCartContext";
 import { Count } from "../Count/Count";
-import { Item } from "../Item/Item";
 import "./ItemDetail.css";
 
 export const ItemDetail = ({ detail }) => {
@@ -12,10 +11,7 @@ export const ItemDetail = ({ detail }) => {
 
     if (!detail) return <p>Producto no encontrado</p>;
     return (
-        /*<Item {...detail}>
-            <Count btnText={"Agregar al carrito"} onConfirm={handleAdd} />
-            {<button onClick={()=>addItem(detail)}>Enviar al carrito</button> }
-        </Item>*/
+      
         <section>
             <div className="container">
                 <div className="row align-items-start item-detail">
@@ -36,7 +32,8 @@ export const ItemDetail = ({ detail }) => {
                         <p className="detail-price">${detail.price}</p>
                         <p>{detail.description}</p>
                         <div className="detail-btns">
-                            <Count
+                           
+                            <Count                             
                                 btnText={"Agregar al carrito"}
                                 onConfirm={handleAdd}
                             />

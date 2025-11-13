@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/useCartContext";
 import { useState } from "react";
+import { FaShoppingCart } from "react-icons/fa";
 import "./Nav.css";
 
 export const Nav = () => {
@@ -26,7 +27,6 @@ export const Nav = () => {
                     className={`collapse navbar-collapse${open ? " show" : ""}`}
                     id="navbarNav">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                       
                         <li className="nav-item">
                             <Link className="nav-link" to={"/category/tablet"}>
                                 Tablets
@@ -51,7 +51,7 @@ export const Nav = () => {
                         <Link
                             className="btn btn-outline-primary me-2"
                             to={"/carrito"}>
-                            Carrito
+                            <FaShoppingCart /> Carrito
                         </Link>
                         {getTotalItems() > 0 && (
                             <span className="span-cart">{getTotalItems()}</span>
