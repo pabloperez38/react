@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CartContext } from "./CartContext";
+import { toast } from "react-toastify";
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
@@ -19,17 +20,17 @@ export const CartProvider = ({ children }) => {
                 }
             });
             setCart(updatedCart);
-            alert(`Se agregó ${item.name} al carrito`);
+            toast.success(`Se agregó ${item.name} al carrito`);
         } else {
             setCart([...cart, item]);
-            alert(`Se agregó ${item.name} al carrito`);
+            toast.success(`Se agregó ${item.name} al carrito`);
         }
     };
 
     const deleteItem = (id) => {
         const filtered = cart.filter((prod) => prod.id !== id);
         setCart(filtered);
-        alert("Producto eliminado del carrito");
+        toast.error("Producto eliminado del carrito");
     };
 
     const clearCart = () => {

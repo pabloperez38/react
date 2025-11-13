@@ -11,6 +11,8 @@ import { MainLayout } from "./layouts/MainLayout";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
 import { Login } from "./components/Login/Login";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     return (
@@ -51,6 +53,7 @@ function App() {
                     <Footer />
                 </CartProvider>
             </BrowserRouter>
+            <ToastContainer />
         </>
     );
 }

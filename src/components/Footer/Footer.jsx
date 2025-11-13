@@ -29,7 +29,7 @@ export const Footer = () => {
                         © 2025 Mi Tienda. Todos los derechos reservados.
                     </div>
                     <div className="footer-year">
-                        Hecho con ♥ en React + Bootstrap
+                        Hecho por Pablo Pérez en React + Bootstrap
                     </div>
                 </div>
             </div>

@@ -3,6 +3,8 @@ import { ProductFormUI } from "../ProductFormUI/ProductFormUI";
 import { validateProduct } from "../../../utils/validateProduct";
 import { uploadToImgbb } from "../../../services/uploadImage";
 import { createProduct } from "../../../services/products";
+import { toast } from 'react-toastify';
+
 
 import "../ProductFormContainer/ProductFormContainer.css";
 
@@ -43,7 +45,7 @@ export const ProductFormContainer = () => {
             };
             console.log(productData);
             await createProduct(productData);
-            alert("Producto creado exitosamente");
+            toast.success("Productgo creado exitosamente!");
             setProduct({
                 name: "",
                 price: "",
