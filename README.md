@@ -42,7 +42,7 @@ Este proyecto es una tienda demo hecha con React, pensada como muestra para un c
 
 ### Autor
 
--   Pablo Pérez
+**Pablo Pérez**
 
 # Demo: React + Vite + Bootstrap
 
@@ -78,10 +78,6 @@ Esta app es una tienda demo hecha con React y Vite, usando Bootstrap para estilo
 ## Personalización
 
 Puedes modificar los estilos usando clases de Bootstrap o agregando tus propias reglas en `App.css`.
-
-## Autor
-
-**Pablo Pérez**
 
 ---
 
