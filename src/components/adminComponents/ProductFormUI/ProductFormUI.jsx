@@ -34,6 +34,7 @@ export const ProductFormUI = ({
                 </div>
                 <div>
                     <label htmlFor="category">Categoría</label>
+                    <p>(tablet-televisor-smartphone)</p>
                     <input
                         id="category"
                         name="category"
