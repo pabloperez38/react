@@ -36,7 +36,7 @@ export const Nav = () => {
                             <Link
                                 className="nav-link"
                                 to={"/category/televisor"}>
-                                Televidores
+                                Televisores
                             </Link>
                         </li>
                         <li className="nav-item">
