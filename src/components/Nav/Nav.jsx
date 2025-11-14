@@ -52,10 +52,12 @@ export const Nav = () => {
                             className="btn btn-outline-primary me-2"
                             to={"/carrito"}>
                             <FaShoppingCart /> Carrito
+                            {getTotalItems() > 0 && (
+                                <span className="span-cart">
+                                    {getTotalItems()}
+                                </span>
+                            )}
                         </Link>
-                        {getTotalItems() > 0 && (
-                            <span className="span-cart">{getTotalItems()}</span>
-                        )}
                     </div>
                 </div>
             </div>

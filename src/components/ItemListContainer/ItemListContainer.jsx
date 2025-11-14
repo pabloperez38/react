@@ -19,7 +19,7 @@ export const ItemListContainer = () => {
         <section>
             <div className="container">
                 {category && (
-                    <h1 className="mb-4 text-capitalize text-primary">
+                    <h1 className="mb-4 text-capitalize text-dark">
                         {category}
                     </h1>
                 )}

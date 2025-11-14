@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/useCartContext";
+import { IoCaretBackCircleSharp } from "react-icons/io5";
+import { FaTrash } from "react-icons/fa";
+import { BsCartDash } from "react-icons/bs";
+import { LuCircleDollarSign } from "react-icons/lu";
+
 import "./Cart.css";
 
 export const Cart = () => {
@@ -12,6 +17,7 @@ export const Cart = () => {
                 <div className="text-center py-5 border rounded bg-light">
                     <p className="mb-3">El carrito está vacío.</p>
                     <Link to="/" className="btn btn-primary">
+                        <IoCaretBackCircleSharp />
                         Volver a la tienda
                     </Link>
                 </div>
@@ -48,7 +54,7 @@ export const Cart = () => {
                                                     onClick={() =>
                                                         deleteItem(item.id)
                                                     }>
-                                                    Eliminar
+                                                    <FaTrash />
                                                 </button>
                                             </td>
                                         </tr>
@@ -62,6 +68,9 @@ export const Cart = () => {
                                 <button
                                     className="btn btn-outline-secondary"
                                     onClick={clearCart}>
+                                    <span>
+                                        <BsCartDash />
+                                    </span>
                                     Vaciar carrito
                                 </button>
                             </div>
@@ -76,6 +85,7 @@ export const Cart = () => {
                                 <button
                                     className="btn btn-primary"
                                     onClick={chekout}>
+                                    <LuCircleDollarSign />
                                     Finalizar Compra
                                 </button>
                             </div>
