@@ -49,8 +49,7 @@ function App() {
                                 />
                             </Route>
                         </Routes>
-                    </div>
-                    <Footer />
+                    </div>                   
                 </CartProvider>
             </BrowserRouter>
             <ToastContainer />

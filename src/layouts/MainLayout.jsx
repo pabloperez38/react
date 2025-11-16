@@ -6,6 +6,7 @@ export const MainLayout = () => {
         <>
             <Nav />
             <Outlet />
+            <Footer />
         </>
     );
 };
