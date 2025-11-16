@@ -1,3 +1,6 @@
+import { Link, useNavigate } from "react-router-dom";
+import "./ProductFormUI.css";
+
 export const ProductFormUI = ({
     product,
     errors,
@@ -5,9 +8,23 @@ export const ProductFormUI = ({
     onChange,
     onFileChange,
     onSubmit,
+    onLogout,
 }) => {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        onLogout();
+        navigate("/");
+    };
+
     return (
         <section>
+            <header className="product-form-header">
+                <Link to="/">Volver al Home</Link>
+                <button type="button" onClick={handleLogout}>
+                    Logout
+                </button>
+            </header>
             <form onSubmit={onSubmit}>
                 <div>
                     <h2>Agregar producto</h2>

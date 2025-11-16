@@ -3,8 +3,8 @@ import { ProductFormUI } from "../ProductFormUI/ProductFormUI";
 import { validateProduct } from "../../../utils/validateProduct";
 import { uploadToImgbb } from "../../../services/uploadImage";
 import { createProduct } from "../../../services/products";
-import { toast } from 'react-toastify';
-
+import { useAuthContext } from "../../../context/AuthContext/useAuthContext";
+import { toast } from "react-toastify";
 
 import "../ProductFormContainer/ProductFormContainer.css";
 
@@ -12,6 +12,7 @@ export const ProductFormContainer = () => {
     const [loading, setLoading] = useState();
     const [errors, setErrors] = useState("");
     const [file, setFile] = useState(null);
+    const { logout } = useAuthContext();
     const [product, setProduct] = useState({
         name: "",
         price: "",
@@ -43,9 +44,8 @@ export const ProductFormContainer = () => {
                 price: Number(product.price),
                 imageUrl,
             };
-            console.log(productData);
             await createProduct(productData);
-            toast.success("Productgo creado exitosamente!");
+            toast.success("Producto creado exitosamente!");
             setProduct({
                 name: "",
                 price: "",
@@ -67,6 +67,7 @@ export const ProductFormContainer = () => {
             onFileChange={setFile}
             loading={loading}
             onSubmit={handleSubmit}
+            onLogout={logout}
         />
     );
 };
